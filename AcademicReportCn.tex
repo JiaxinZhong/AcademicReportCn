@@ -1,0 +1,167 @@
+\documentclass{article}
+
+\usepackage{AcademicReportCn}
+
+% enable Chinese
+\usepackage[UTF8]{ctex}
+
+% setting for levels
+\usepackage{hyperref}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\hypersetup{
+    bookmarksopenlevel = 3,
+    citecolor = red,
+	colorlinks		=	true,
+	bookmarks		=	true,
+	bookmarksopen	=	true,
+    % bookmarksdepth  =   2,
+	pdfstartview	=	Fit,
+	pdftitle		=	{学术报告模板},
+	pdfauthor		=	{钟家鑫},
+}
+
+% If use biblatex, it is necessary to comment 
+%   \bibliographystyle{unsrt}
+%   \bibliography{biblatex}
+%   at the end of the document.
+% In addition, biber is required to compile: xelatex -> biber -> xelatex*2
+\usepackage[
+    giveninits=true, 
+    maxbibnames=99,
+    % style=numeric,
+    sorting=none,
+    doi = false,
+    url = false,
+    isbn = false,
+    style=ieee, citestyle=numeric-comp,
+    ]{biblatex}
+\addbibresource{biblatex.bib}
+
+% open book mark at arbitrary level
+\usepackage[open, numbered]{bookmark}
+% opt: numbered --- show numbers in the bookmark
+
+% for some dummy text
+\usepackage{lipsum}
+
+% see https://tex.stackexchange.com/questions/226481/appendix-section-title
+\usepackage[title]{appendix}
+
+
+\title{\textbf{学术报告模板}}
+\author{钟家鑫}
+\date{\today}
+
+% \usepackage{mlmodern}
+
+
+\begin{document}
+\maketitle
+% enable Page 1 of xx at the first page
+\thispagestyle{firststyle}
+
+\section{简介}
+This is a \LaTeX{} template designed for daily writing the academic documents, e.g., progress reports, technical reports, and technical notes \cite{Zhong2023ModalExpansionMethod}.
+
+\lipsum[1]
+
+\lipsum[2]
+
+\lipsum[3]
+
+\lipsum[4]
+
+\lipsum[5]
+
+\lipsum[6]
+
+\section{图}
+Figure~\ref{fig:39:f020390} shows the results of something.
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width = 0.4\textwidth]{example-image}
+    \caption{Example figure}
+    \label{fig:39:f020390}
+\end{figure}
+
+\section{表}
+Table~\ref{tab:f20} compares the retrieved parameters.
+\begin{table}[!htb]
+    \centering
+    \caption{Comparison of retrieved parameters.}
+    \begin{tabular}{cccccc}
+        \toprule
+         & $\omega_0$ 
+         & $\gamma_0$
+         & $\gamma_1$
+         & $\kappa_1$
+         & $\kappa_\mathrm{c}$
+         \\
+        \midrule
+        Our experiments 
+         & 
+         1675~Hz
+         &
+         7.7~Hz
+         & 
+         0.7~Hz
+         &
+         27.8~Hz
+         & 
+         $\qty(-0.4+4.9\mathrm{i})$ Hz\\
+         Experiments in \cite{Zhang2021AcousticNonHermitianSkin}
+         & 
+         1706~Hz
+         &
+         2.13~Hz
+         & 
+         1.77~Hz
+         &
+         24~Hz
+         & 
+         $\qty(-11+3.9\mathrm{i})$ Hz\\
+        \bottomrule
+    \end{tabular}
+    \label{tab:f20}
+\end{table}
+
+
+\section{公式}
+Equation~(\ref{eq:29jf2}) is an example of the labelled equation.
+\begin{equation}
+    f(x) = \int_0^x t\sin t \dd t
+    \label{eq:29jf2}
+\end{equation}
+
+\section{引用}
+引用示例：\cite{Zhong2020InsertionLossThin}
+
+
+
+% Activate the appendix
+% from now on sections are numerated with capital letters
+\begin{appendices}
+% \addcontentsline{toc}{section}{Appendices}
+
+\section{式(\ref{eq:29jf2})的推导}
+\lipsum[1]
+
+\lipsum[1]
+
+\lipsum[1]
+
+\section{Illustration of Fig.~(\ref{fig:39:f020390})}
+\lipsum[1]
+
+\lipsum[1]
+\end{appendices}
+
+
+\addcontentsline{toc}{section}{参考文献}
+% https://tex.stackexchange.com/questions/261443/changing-bibliography-title-with-biblatex-within-the-document
+\printbibliography[title=参考文献]
+
+\end{document}
+
+
