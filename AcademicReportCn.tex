@@ -21,22 +21,21 @@
 	pdfauthor		=	{钟家鑫},
 }
 
-% If use biblatex, it is necessary to comment 
-%   \bibliographystyle{unsrt}
-%   \bibliography{biblatex}
+%% use bibtex here 
+\bibliographystyle{unsrt}
 %   at the end of the document.
 % In addition, biber is required to compile: xelatex -> biber -> xelatex*2
-\usepackage[
-    giveninits=true, 
-    maxbibnames=99,
-    % style=numeric,
-    sorting=none,
-    doi = false,
-    url = false,
-    isbn = false,
-    style=ieee, citestyle=numeric-comp,
-    ]{biblatex}
-\addbibresource{biblatex.bib}
+% \usepackage[
+%     giveninits=true, 
+%     maxbibnames=99,
+%     % style=numeric,
+%     sorting=none,
+%     doi = false,
+%     url = false,
+%     isbn = false,
+%     style=ieee, citestyle=numeric-comp,
+%     ]{biblatex}
+% \addbibresource{biblatex.bib}
 
 % open book mark at arbitrary level
 \usepackage[open, numbered]{bookmark}
@@ -92,35 +91,35 @@ Table~\ref{tab:f20} compares the retrieved parameters.
     \caption{Comparison of retrieved parameters.}
     \begin{tabular}{cccccc}
         \toprule
-         & $\omega_0$ 
+         & $\omega_0$
          & $\gamma_0$
          & $\gamma_1$
          & $\kappa_1$
          & $\kappa_\mathrm{c}$
-         \\
+        \\
         \midrule
-        Our experiments 
-         & 
-         1675~Hz
+        Our experiments
          &
-         7.7~Hz
-         & 
-         0.7~Hz
+        1675~Hz
          &
-         27.8~Hz
-         & 
-         $\qty(-0.4+4.9\mathrm{i})$ Hz\\
-         Experiments in \cite{Zhang2021AcousticNonHermitianSkin}
-         & 
-         1706~Hz
+        7.7~Hz
          &
-         2.13~Hz
-         & 
-         1.77~Hz
+        0.7~Hz
          &
-         24~Hz
-         & 
-         $\qty(-11+3.9\mathrm{i})$ Hz\\
+        27.8~Hz
+         &
+        $\qty(-0.4+4.9\mathrm{i})$ Hz \\
+        Experiments in \cite{Zhang2021AcousticNonHermitianSkin}
+         &
+        1706~Hz
+         &
+        2.13~Hz
+         &
+        1.77~Hz
+         &
+        24~Hz
+         &
+        $\qty(-11+3.9\mathrm{i})$ Hz  \\
         \bottomrule
     \end{tabular}
     \label{tab:f20}
@@ -142,25 +141,30 @@ Equation~(\ref{eq:29jf2}) is an example of the labelled equation.
 % Activate the appendix
 % from now on sections are numerated with capital letters
 \begin{appendices}
-% \addcontentsline{toc}{section}{Appendices}
+    % \addcontentsline{toc}{section}{Appendices}
 
-\section{式(\ref{eq:29jf2})的推导}
-\lipsum[1]
+    \section{式(\ref{eq:29jf2})的推导}
+    \lipsum[1]
 
-\lipsum[1]
+    \lipsum[1]
 
-\lipsum[1]
+    \lipsum[1]
 
-\section{Illustration of Fig.~(\ref{fig:39:f020390})}
-\lipsum[1]
+    \section{Illustration of Fig.~(\ref{fig:39:f020390})}
+    \lipsum[1]
 
-\lipsum[1]
+    \lipsum[1]
 \end{appendices}
 
 
 \addcontentsline{toc}{section}{参考文献}
+
+%% biblatex
 % https://tex.stackexchange.com/questions/261443/changing-bibliography-title-with-biblatex-within-the-document
-\printbibliography[title=参考文献]
+% \printbibliography[title=参考文献]
+
+%% bibtex
+\bibliography{bibtex}
 
 \end{document}
 
